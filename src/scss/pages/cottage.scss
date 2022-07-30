@@ -139,6 +139,9 @@
   }
   &__slider{
     overflow: hidden;
+    &-wrap{
+      position: relative;
+    }
   }
   .swiper{
     &-container{
@@ -175,6 +178,29 @@
           img{
             width: 76%;
           }
+        }
+      }
+    }
+    &-button{
+      &-prev{
+        left: -80px;
+      }
+      &-next{
+        right: -80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .gallery{
+    .swiper{
+      &-button{
+        &-prev{
+          left: 10px;
+        }
+        &-next{
+          right: 10px;
         }
       }
     }
@@ -251,6 +277,12 @@
       &-container{
         width: 100%;
         padding: 25px 0;
+      }
+      &-button{
+        &-prev,
+        &-next{
+          display: none;
+        }
       }
     }
   }
