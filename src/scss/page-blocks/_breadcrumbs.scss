@@ -1,0 +1,48 @@
+@import "../vars.scss";
+.page-top{
+    padding: 37px 0 68px;
+    color: #fff;
+    background-color: $brown;
+    &__title{
+        margin-top: 48px;
+    }
+    &__desc{
+        margin-top: 11px;
+        font-size: 20px;
+        line-height: 161.8%;
+    }
+}
+.breadcrumbs {
+    &__item {
+        font-size: 15px;
+        line-height: 18px;
+        display: inline;
+        &:not(:first-child) {
+            &:before {
+                content: '/';
+                margin: 0 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .page-top{
+        padding:20px 0 40px;
+        &__title{
+            margin-top: 25px;
+        }
+        &__desc{
+            font-size: 18px;
+            margin-top: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .info{
+        &__desc{
+            font-size: 16px;
+        }
+    }
+}

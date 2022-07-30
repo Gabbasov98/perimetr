@@ -1,0 +1,81 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Каталог моделей", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            @@include('components/page-blocks/_header.html')
+        </header>
+        <main class="content">
+
+            <section class="page-top">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <span class="breadcrumbs__item">Каталог моделей</span>
+                    </div>
+                    <h1 class="page-top__title display1">Каталог моделей</h1>
+                    <div class="page-top__desc">Выберите модель, подходящуюю именно Вам</div>
+                </div>
+            </section>
+
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__items">
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog2.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog3.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog4.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog5.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog6.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog7.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog8.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog9.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog10.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog11.webp"})
+                        </a>
+                        <a href="" class="catalog-card">
+                            @@include('components/cards/_catalog-card.html',{"img":"catalog12.webp"})
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consult">
+                @@include('components/page-blocks/_consult.html')
+            </section>
+
+            <section class="info info--pt150 info--gray">
+                @@include('components/page-blocks/_info.html')
+            </section>
+
+        </main>
+        <footer class="footer">
+            @@include('components/page-blocks/_footer.html')
+        </footer>
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

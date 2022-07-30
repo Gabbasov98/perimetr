@@ -1,0 +1,142 @@
+@import "../vars";
+.footer{
+  padding: 45px 0 60px;
+  background: #4A4A4A;
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  a{
+    &:hover{
+      color: $brown;
+    }
+  }
+  &__inner{
+    display: flex;
+  }
+  &__left{
+    padding-top: 12px;
+  }
+  &__center{
+    margin-left: 160px;
+  }
+  &__right{
+    margin-left: auto;
+    text-align: right;
+  }
+  &__logo{
+    display: block;
+    width: 197px;
+    flex-shrink: 0;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  &__protect,
+  &__link2,
+  &__link{
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &__protect{
+    margin-top: 30px;
+    max-width: 235px;
+  }
+  &__links2{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__link2{
+    &:not(:last-child){
+      margin-right: 42px;
+    }
+  }
+  &__links{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  &__link{
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  &__phone{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__mail{
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 9px;
+    display: block;
+  }
+  &__btn{
+    width: 175px;
+    height: 42px;
+    margin-top: 12px;
+  }
+  &__socials{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-item{
+      margin-left: 10px;
+      width: 35px;
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
+      img{
+        transition: all .3s;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .footer{
+    padding: 30px 0;
+    &__inner{
+      display: block;
+    }
+    &__left{
+      padding: 0;
+    }
+    &__center{
+      margin: 30px 0 0;
+    }
+    &__right{
+      text-align: left;
+      margin: 30px 0 0;
+    }
+    &__socials{
+      justify-content: unset;
+      &-item{
+        margin: 0 10px 0 0;
+      }
+    }
+    &__protect,
+    &__links2{
+      margin-top: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+ .footer{
+   &__links2{
+     flex-direction: column;
+     align-items: unset;
+   }
+   &__link2{
+     &:not(:last-child){
+       margin: 0 0 10px;
+     }
+   }
+ }
+}

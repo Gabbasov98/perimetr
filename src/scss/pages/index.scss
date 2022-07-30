@@ -1,0 +1,660 @@
+@import "../vars";
+.main{
+  margin-top: -100px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  .swiper{
+    &-wrapper{
+      align-items: stretch;
+    }
+    &-slide{
+      background-size: cover;
+      background-position: center top;
+      padding: 260px 0 160px;
+      min-height: 800px;
+      height: auto;
+    }
+    &-button{
+      &-next,
+      &-prev{
+        border: 2px solid #fff;
+        z-index: 2;
+        &:hover{
+          background-color: #fff;
+          path{
+            fill: $black;
+          }
+        }
+      }
+      &-next{
+        right: 100px;
+      }
+      &-prev{
+        left: 100px;
+      }
+    }
+    &-pagination{
+      bottom: 40px;
+      z-index: 1;
+      &-bullet{
+        margin: 0 9.5px !important;
+        opacity: 1;
+        background-color: transparent;
+        border: 2px solid #FFFFFF;
+        &-active{
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  &__inner{
+    max-width: 610px;
+  }
+  &__desc{
+    font-size: 17px;
+    line-height: 164%;
+    margin-top: 23px;
+    max-width: 585px;
+  }
+  &__btn{
+    width: 217px;
+    height: 65px;
+    margin-top: 48px;
+  }
+}
+
+.models{
+  padding: 90px 0 100px;
+  overflow: hidden;
+  &__desc{
+    margin-top: 12px;
+  }
+  &__slider{
+    margin-top: 38px;
+    position: relative;
+  }
+  .swiper{
+    &-slide{
+      transform: translateX(-80px);
+      &-active,
+      &-active~.swiper-slide{
+        transform: unset;
+      }
+      &-next + .swiper-slide + .swiper-slide ~ .swiper-slide{
+        transform: translateX(80px);
+      }
+    }
+    &-button{
+      &-prev{
+        left: -80px;
+      }
+      &-next{
+        right: -80px;
+      }
+    }
+  }
+}
+
+.info{
+  padding: 90px 0 100px;
+  &--gray{
+    background-color: $grayBg;
+  }
+  &__title{
+    text-align: center;
+  }
+  &__desc{
+    max-width: 930px;
+    margin: 14px auto 0;
+    font-size: 20px;
+    line-height: 153.8%;
+    text-align: center;
+  }
+  &__groups{
+    margin-top: 56px;
+  }
+  &__group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    &:not(:last-child){
+      margin-bottom: 70px;
+    }
+    &:nth-child(even){
+      .info{
+        &__img{
+          order: -1;
+        }
+        &__content{
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  &__img{
+    img{
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+  }
+  &__subtitle{
+    margin-bottom: 12px;
+  }
+}
+
+.consult{
+  padding-top: 114px;
+  &__wrap{
+    margin-top: 41px;
+    padding: 62px 0;
+    background-color: $brown;
+    min-height: 373px;
+  }
+  &__inner{
+    position: relative;
+  }
+  &__text{
+    color: #fff;
+    @media screen and (min-width: 576px){
+      font-size: 16px;
+    }
+  }
+  &__left{
+    width: calc(100% - 520px);
+  }
+  &__form{
+    z-index: 2;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
+    border-radius: 10px;
+    width: 460px;
+    right: 0;
+    bottom: -120px;
+    padding: 42px 50px;
+  }
+  &__btn{
+    margin-top: 32px;
+    width: 100%;
+    height: 65px;
+  }
+  &__hint{
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #606060;
+    text-align: center;
+  }
+}
+
+.feedback{
+  padding: 130px 0 100px;
+  overflow: hidden;
+  &__title{
+    text-align: center;
+  }
+  &__slider{
+    position: relative;
+    margin-top: 50px;
+  }
+  &__item{
+    display: block;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  .swiper{
+    &-container{
+      overflow: hidden;
+    }
+    &-button{
+      &-prev{
+        left: -80px;
+      }
+      &-next{
+        right: -80px;
+      }
+    }
+  }
+}
+
+.dealer{
+  padding: 90px 0;
+  background-color: $brown;
+  color: #fff;
+  &__inner{
+    position: relative;
+  }
+  &__content{
+    width: 585px;
+    max-width: calc(100% - 400px);
+  }
+  &__title{
+    margin-bottom: 24px;
+  }
+  &__item{
+    width: 365px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    position: absolute;
+    filter: drop-shadow(5px 15px 40px rgba(30, 35, 66, 0.15));
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.advantages{
+  padding: 135px 0 100px;
+  &__title{
+    text-align: center;
+  }
+  &__items{
+    margin-top: 66px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+  }
+  &__icon{
+    width: 147px;
+    height: 147px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 38px;
+    img{
+      width: 54.5%;
+      display: block;
+    }
+  }
+  &__info{
+    strong{
+      font-weight: 700;
+    }
+    small{
+      font-size: 13px;
+      line-height: 150%;
+      display: block;
+    }
+  }
+}
+
+.fabric{
+  padding: 90px 0 100px;
+  &__title{
+    text-align: center;
+  }
+  &__desc{
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 153.8%;
+    text-align: center;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 35px;
+  }
+  &__item{
+    height: 127px;
+    border-radius: 10px;
+    border: 1px solid #E6E6E6;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .main{
+    .swiper{
+      &-button{
+        &-next{
+          right: 10px;
+        }
+        &-prev{
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1260px){
+  .main{
+    .swiper{
+      &-button{
+        &-next{
+          right: 30px;
+        }
+        &-prev{
+          left: 30px;
+        }
+        &-next,
+        &-prev{
+          top: unset;
+          margin: 0;
+          bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .main{
+    .swiper{
+      &-slide{
+        padding: 180px 0 100px;
+        min-height: 650px;
+      }
+    }
+    &__btn{
+      margin-top: 35px;
+    }
+  }
+
+  .models{
+    .swiper{
+      &-slide{
+        width: 271px;
+        transform: unset !important;
+      }
+      &-button{
+        &-prev,
+        &-next{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .consult{
+    &__left{
+      width: calc(100% - 420px);
+    }
+    &__form{
+      width: 400px;
+    }
+  }
+
+  .feedback{
+    &__item{
+      width: 278px;
+    }
+    .swiper{
+      &-container{
+        overflow: unset;
+      }
+      &-button{
+        &-prev,
+        &-next{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .advantages{
+    &__items{
+      gap: 30px;
+    }
+    &__icon{
+      width: 120px;
+      height: 120px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .main{
+    margin-top: -72px;
+    .swiper{
+      &-slide{
+        min-height: 450px;
+        padding: 120px 0 70px;
+      }
+      &-pagination{
+        bottom: 12px;
+      }
+      &-button{
+        &-prev,
+        &-next{
+          display: none;
+        }
+      }
+    }
+    &__inner{
+      max-width: 400px;
+    }
+    &__desc{
+      font-size: 16px;
+    }
+  }
+
+  .models{
+    padding: 30px 0 35px;
+    &__desc{
+      margin-top: 10px;
+    }
+    &__slider{
+      margin-top: 25px;
+    }
+  }
+
+  .info{
+    padding: 30px 0 35px;
+    &__desc{
+      font-size: 18px;
+    }
+    &__groups{
+      margin-top: 15px;
+    }
+    &__group{
+      grid-template-columns: 1fr;
+      gap: 10px;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+    &__img{
+      order: -1;
+      img{
+        max-width: 500px;
+        border-radius: 5px;
+      }
+    }
+    &__content{
+      padding: 0 !important;
+    }
+  }
+
+  .consult{
+    padding-top: 30px;
+    &__left{
+      width: 100%;
+    }
+    &__wrap{
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+    &__form{
+      position: static;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  .feedback{
+    padding: 30px 0;
+    &__slider{
+      margin-top: 25px;
+    }
+  }
+
+  .dealer{
+    padding: 30px 0;
+    &__content{
+      width: 100%;
+      max-width: 100%;
+    }
+    &__title{
+      margin-bottom: 15px;
+    }
+    &__item{
+      position: static;
+      width: 100%;
+      max-width: 400px;
+      transform: unset;
+      margin: 5px 0 0;
+    }
+  }
+
+  .advantages{
+    padding: 30px 0;
+    &__items{
+      margin-top: 20px;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .fabric{
+    padding: 30px 0;
+    &__desc{
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    &__items{
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 25px;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px){
+  .main{
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      //opacity: .6;
+      background: linear-gradient(90deg, #A68764 39.22%, rgba(166, 135, 100, .7) 60.05%);
+      left: 0;
+      top: 0;
+    }
+    .swiper{
+      &-slide{
+        position: relative;
+        min-height: 350px;
+        padding: 100px 0 50px;
+
+      }
+    }
+    &__inner{
+      position: relative;
+      z-index: 2;
+    }
+    &__title{
+      max-width: 350px;
+    }
+    &__desc{
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    &__btn{
+      margin-top: 20px;
+      height: 45px;
+      width: 100%;
+    }
+  }
+
+  .consult{
+    &__wrap{
+      padding-bottom: 0;
+    }
+    &__form{
+      width: calc(100% + 40px);
+      padding: 20px;
+      border-radius: 0;
+      margin-left: -20px;
+    }
+    &__btn{
+      height: 45px;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+    &__hint{
+      font-size: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  .info{
+    &__desc{
+      font-size: 16px;
+    }
+  }
+
+  .feedback{
+    &__item{
+      width: 220px;
+    }
+  }
+
+  .advantages{
+    &__item{
+      display: block;
+      text-align: center;
+    }
+    &__icon{
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 10px;
+    }
+  }
+
+  .fabric{
+    &__desc{
+      font-size: 16px;
+    }
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 20px;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px){
+  .fabric{
+    &__items{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
